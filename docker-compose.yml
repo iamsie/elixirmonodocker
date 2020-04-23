@@ -20,9 +20,7 @@ services:
     image: postgres:12.2
     environment:
       POSTGRES_USER: ${DB_USERNAME}
-      DB_PASSWORD: ${DB_PASSWORD}
-      DB_NAME: ${DB_NAME}
-      DB_HOST: ${DB_HOST}
+      POSTGRES_PASSWORD: ${DB_PASSWORD}
     restart: always
     volumes:
       - ${PWD}/docker/db/data:/var/lib/postgresql/data
