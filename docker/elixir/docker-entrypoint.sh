@@ -1,6 +1,6 @@
 #!/bin/bash
 # fail if we error out
-set -e
+set "MIX_ENV=dev" && mix compile
 # Wait for database to come up
 # until psql -h db -U "postgres" -c '\q' 2>/dev/null; do
 #   >&2 echo "Postgres is unavailable - sleeping"
@@ -9,6 +9,7 @@ set -e
 # Ensure we have the basics...
 mix local.hex --force
 mix local.rebar --force
+mix deps.get
 mix ecto.create
 mix ecto.migrate
 mix phx.server
