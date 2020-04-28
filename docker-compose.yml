@@ -11,6 +11,7 @@ services:
       - "DB_PASSWORD=${DB_PASSWORD}"
       - "DB_NAME=${DB_NAME}"
       - "DB_HOST=${DB_HOST}"
+      - "TG_BOT_TOKEN=${TG_BOT_TOKEN}"
     ports:
       - "4000:4000"
     depends_on:
