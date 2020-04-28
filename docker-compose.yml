@@ -12,6 +12,7 @@ services:
       - "DB_NAME=${DB_NAME}"
       - "DB_HOST=${DB_HOST}"
       - "TG_BOT_TOKEN=${TG_BOT_TOKEN}"
+      - "WEB_HOOK_URL=${WEB_HOOK_URL}"
     ports:
       - "4000:4000"
     depends_on:
